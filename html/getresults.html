@@ -75,7 +75,8 @@ var origin = window.location.href
 let a = getAllUrlParams(origin).a
 let b = getAllUrlParams(origin).b
 let c = getAllUrlParams(origin).c
-let product1 = (-b-(Math.sqrt(b**2-4ac)));
-let product2 = (-b+(Math.sqrt(b**2-4ac)));
+let d = Math.sqrt(b ** 2 - 4 * (2) * (1));
+let product1 = ((-b-d)/2*(a));
+let product2 = ((-b+d)/2*(a));
 document.getElementById("answer2").innerHTML = '<br>x = '+product1+'<br><strong>OR</strong><br>x = '+product2;
 </script>
