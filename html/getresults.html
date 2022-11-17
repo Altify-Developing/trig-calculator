@@ -76,7 +76,13 @@ let a = getAllUrlParams(origin).a
 let b = getAllUrlParams(origin).b
 let c = getAllUrlParams(origin).c
 let e =  b**2 - 4 * (a) * (c)
-let product1 = ((-b-e)/2*(a));
-let product2 = ((-b+e)/2*(a));
+if (Math.sign(e) == -1) {
+	var f = e*-1;
+}
+if (Math.sign(e) == 1 ) {
+	var f = e;
+}
+let product1 = ((-b-Math.sqrt(f))/2*(a));
+let product2 = ((-b+Math.sqrt(f))/2*(a));
 document.getElementById("answer2").innerHTML = '<br>x = '+product1+'<br><strong>OR</strong><br>x = '+product2;
 </script>
