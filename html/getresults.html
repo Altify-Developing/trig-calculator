@@ -80,12 +80,21 @@ let ys = getAllUrlParams(origin).ys
 let zs = getAllUrlParams(origin).zs
 let rb = bs * Math.PI/180;
 let rc = cs * Math.PI/180;
+let cb = bs * Math.PI/180;
+let cc = cs * Math.PI/180;
 let sinB = (xs/zs);
 let sinC = (ys/zs);
 let sinBz = (xs/Math.sin(rb));
 let sinBx = (zs*Math.sin(rb));
 let sinCy = (zs*Math.sin(rc));
 let sinCz = (ys/Math.sin(rc));
-// Math.cos(degree * Math.PI / 180);
-document.getElementById("answer2").innerHTML = "sinB ≈ "+sinB+"<br>sinC ≈ "+sinC+"<br>( when C is known ) when z is known, y ≈ "+sinCy+"<br>( when C is known ) when y is known, z ≈ "+sinCz+"<br>( when B is known ) when z is known, x ≈ "+sinBz+"<br>( when B is known ) when x is known, z ≈ "+sinBx;
+let cosBz = (ys/Math.cos(cb));
+let cosBy = (zs*Math.cos(cb));
+let cosCz = (xs/Math.cos(cc));
+let cosCx = (zs*Math.cos(cc));
+let tanBx = (ys*Math.tan(cb));
+let tanBy = (xs/Math.tan(cb));
+let tanCy = (xs*Math.tan(cc));
+let tanCx = (ys/Math.tan(cc));
+document.getElementById("answer2").innerHTML = "( start of sine ) sinB ≈ "+sinB+"<br>sinC ≈ "+sinC+"<br>( when C is known ) when z is known, y ≈ "+sinCy+"<br>( when C is known ) when y is known, z ≈ "+sinCz+"<br>( when B is known ) when z is known, x ≈ "+sinBz+"<br>( when B is known ) when x is known, z ≈ "+sinBx+"<br>( end of sine, start of cosine )<br>( cosB when y is known ) z = "+cosBz+"<br>( cosB when z is known ) y = "+cosBy+"<br>( cosC when x is known ) z = "+cosCz+"<br>( cosC when z is known ) x = "+cosCx+"<br>( end of cosine, start of tangent )<br>( tanB when y is known ) x = "+tanBx+"<br>( tanB when x is known ) y = "+tanBy+"<br>( tanC when x is known ) y = "+tanCy+"<br>( tanC when y is known ) x = "+tanCx+"<br>( end of tangent )";
 </script>
