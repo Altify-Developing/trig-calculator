@@ -27,6 +27,7 @@
 	    })(window, document, "clarity", "script", "bk3655ppi4");
 	</script>
   <h1>Results:</h1>
+	<h3>Some results are not 100% accurate, round up and sometimes even that is not 100% right.</h3>
   </p><p id="answer2"></p><br><button class='btn1' onclick="history.back()">Go Back</button>
   <h2>Tool by: <a alt='Altify Developing' title='Altify Developing' href="https://github.com/Altify-Developing/">Altify</a></h2>
 <script>
@@ -72,17 +73,19 @@ function getAllUrlParams(url) {
   return obj;
 }
 var origin = window.location.href
-let a = getAllUrlParams(origin).a
-let b = getAllUrlParams(origin).b
-let c = getAllUrlParams(origin).c
-let e =  b**2 - 4 * (a) * (c)
-if (Math.sign(e) == -1) {
-	var f = e*-1;
-}
-if (Math.sign(e) == 1 ) {
-	var f = e;
-}
-let product1 = ((-b-Math.sqrt(f))/2*(a));
-let product2 = ((-b+Math.sqrt(f))/2*(a));
-document.getElementById("answer2").innerHTML = '<br>x = '+product1+'<br><strong>OR</strong><br>x = '+product2;
+let bs = getAllUrlParams(origin).bs
+let cs = getAllUrlParams(origin).cs
+let xs = getAllUrlParams(origin).xs
+let ys = getAllUrlParams(origin).ys
+let zs = getAllUrlParams(origin).zs
+let rb = bs * Math.PI/180;
+let rc = cs * Math.PI/180;
+let sinB = (xs/zs);
+let sinC = (ys/zs);
+let sinBz = (xs/Math.sin(rb));
+let sinBx = (zs*Math.sin(rb));
+let sinCy = (zs*Math.sin(rc));
+let sinCz = (ys/Math.sin(rc));
+// Math.cos(degree * Math.PI / 180);
+document.getElementById("answer2").innerHTML = "sinB ≈ "+sinB+"<br>sinC ≈ "+sinC+"<br>( when C is known ) when z is known, y ≈ "+sinCy+"<br>( when C is known ) when y is known, z ≈ "+sinCz+"<br>( when B is known ) when z is known, x ≈ "+sinBz+"<br>( when B is known ) when x is known, z ≈ "+sinBx;
 </script>

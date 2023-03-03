@@ -24,31 +24,34 @@
     <meta name="msvalidate.01" content="4CEA3A5E8030C3BE543E880766463233" />
 </head>
 <body>	<h1>Trigonometry Equations Calculator</h1><h2>Created By: <a href='https://github.com/Altify-Developing/Altify-Developing-Main'>Altify Developing</a></h2>
-	<i>( Example Equation )</i><strong><p><red>a</red>x<sup>2</sup>+<blue>b</blue>x+<green>c</green></p></strong><br>
-<label for="a">A:</label>
-<input id="a" name="a" value="1"><br>
-<label for="b">B:</label>
-<input id="b" name="b" value="1"><br>
-<label for="c">C:</label>
-<input id="c" name="c" value="1"><br>
-<input type="radio" id="sin" name="type" value="sine">
-<label for="html">HTML</label><br>
-<input type="radio" id="cos" name="type" value="cosine">
-<label for="css">CSS</label><br>
-<input type="radio" id="tan" name="type" value="tangent">
-<label for="javascript">JavaScript</label><br>
-<a id="d" target="_blank">Send</a><br>
+	<i>( Example Equation )</i><p>( ex: sinB = x/z )</p><br>
+<h3>Form for sine equations</h3>
+<img src="img/right.png" width="25%" height="25%"/>
+<br>
+	<p>( leave field blank or as default if not in use )</p>
+<br>
+<label for="as">A:</label>
+<input id="as" name="as" value="90"><br>
+<label for="bs">B:</label>
+<input id="bs" name="bs" value="45"><br>
+<label for="cs">C:</label>
+<input id="cs" name="cs" value="45"><br>
+<label for="xs">x:</label>
+<input id="xs" name="xs" value="1"><br>
+<label for="ys">y:</label>
+<input id="ys" name="ys" value="1"><br>
+<label for="zs">z:</label>
+<input id="zs" name="zs" value="1"><br>
+<a id="ds" target="_blank">Send</a><br>
 	<a href='html/examples.html'>Examples</a><br><button class='btn1' onclick="history.back()">Go Back</button>
 <script>
-  document.getElementById("d").addEventListener("click", function() {
-    var i1 = document.getElementById("a").value;
-    var i2 = document.getElementById("b").value;
-    var i3 = document.getElementById("c").value;
-    var i4 = document.getElementById("sin").value;
-    var i5 = document.getElementById("cos").value;
-    var i6 = document.getElementById("tan").value;
-    alert(i4+i5+i6);
-    // this.setAttribute("href", "https://trig.results.altifydeveloping.com/html/getresults.html?a="+i1+'&b='+i2+'&c='+i3);
+  document.getElementById("ds").addEventListener("click", function() {
+    var i1 = document.getElementById("bs").value;
+    var i2 = document.getElementById("cs").value;
+    var i3 = document.getElementById("xs").value;
+    var i4 = document.getElementById("ys").value;
+    var i5 = document.getElementById("zs").value;
+    this.setAttribute("href", "https://trig-calculator.altify-developm.repl.co/html/getresults.html?bs="+i1+'&cs='+i2+'&xs='+i3+'&ys='+i4+'&zs='+i5);
   });
 </script>
 </body>
