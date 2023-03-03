@@ -43,7 +43,6 @@
 <label for="zs">z:</label>
 <input id="zs" name="zs" value="1"><br>
 <a id="ds" target="_blank">Send</a><br>
-	<a href='html/examples.html'>Examples</a><br><button class='btn1' onclick="history.back()">Go Back</button>
 <script>
   document.getElementById("ds").addEventListener("click", function() {
     var i1 = document.getElementById("bs").value;
@@ -54,5 +53,6 @@
     this.setAttribute("href", "https://trig-calculator.altify-developm.repl.co/html/getresults.html?bs="+i1+'&cs='+i2+'&xs='+i3+'&ys='+i4+'&zs='+i5);
   });
 </script>
+<button class='btn1' onclick="history.back()">Go Back</button>
 </body>
 </html>
